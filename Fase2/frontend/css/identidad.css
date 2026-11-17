@@ -1,0 +1,74 @@
+body {
+  background-color: #edf0e9;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)),
+    url("../imagenes/fondo-wilson.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo-recorte {
+  --logo-medida: 43px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: var(--logo-medida);
+  height: var(--logo-medida);
+  overflow: hidden;
+  border: 1px solid #dce4d8;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.logo-recorte-imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--logo-medida) * 2.56);
+  height: calc(var(--logo-medida) * 1.4);
+  max-width: none;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.logo-recorte.marca-pequena {
+  --logo-medida: 48px;
+}
+
+.logo-recorte.marca-acceso {
+  --logo-medida: 300px;
+}
+
+.logo-recorte.marca-portada {
+  --logo-medida: 68px;
+}
+
+.logo-recorte.marca-quienes-somos {
+  --logo-medida: 300px;
+}
+
+.logo-recorte.brand-mark {
+  transform: none;
+  background: #fff;
+}
+
+.logo-recorte.workspace-logo {
+  --logo-medida: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.login-brand .brand-mark.logo-recorte {
+  width: var(--logo-medida);
+  height: var(--logo-medida);
+}
+
+@media (max-width: 650px) {
+  .logo-recorte.marca-acceso {
+    --logo-medida: min(300px, 48vw);
+  }
+}

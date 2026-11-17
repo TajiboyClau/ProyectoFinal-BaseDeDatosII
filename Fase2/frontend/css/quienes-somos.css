@@ -1,0 +1,246 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #27352e;
+  background: #f6f7f4;
+  font-synthesis: none;
+  font-weight: 400;
+  font-size: 16px;
+  --verde: #2d493b;
+  --suave: #737c76;
+  --borde: #e3e9df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)),
+    url("../imagenes/fondo-wilson.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 76px;
+  padding: 0 clamp(24px, 7vw, 100px);
+  border-bottom: 1px solid var(--borde);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.about-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.about-header nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  color: var(--suave);
+  font-size: 14px;
+}
+
+.about-nav-button,
+.about-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 7px;
+  background: var(--verde);
+  color: white;
+  font-weight: 600;
+}
+
+.about-main {
+  width: min(100% - 48px, 1120px);
+  margin: 0 auto;
+  padding: 0 34px;
+  border: 1px solid #ffffffb8;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0 86px;
+}
+
+.about-copy {
+  max-width: 700px;
+}
+
+.about-hero-logo {
+  justify-self: center;
+}
+
+.about-kicker {
+  color: #78886c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-hero h1 {
+  max-width: 700px;
+  margin: 20px 0;
+  color: #26382e;
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 600;
+  letter-spacing: -3px;
+  line-height: 1.05;
+}
+
+.about-hero > p:not(.about-kicker) {
+  max-width: 620px;
+  margin-bottom: 28px;
+  color: var(--suave);
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.8;
+}
+
+.about-story {
+  max-width: 850px;
+  margin: 0 0 76px;
+  padding: 34px 38px;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.about-story h2 {
+  margin: 12px 0;
+  color: #26382e;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.about-story > p:last-child {
+  max-width: 740px;
+  color: var(--suave);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-sections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding-bottom: 88px;
+}
+
+.about-sections article {
+  min-height: 220px;
+  padding: 26px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.about-number {
+  color: #8da35c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-sections h2 {
+  margin: 24px 0 12px;
+  color: #2d493b;
+  font-size: 20px;
+}
+
+.about-sections p {
+  color: var(--suave);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.about-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0 30px;
+  border-top: 1px solid var(--borde);
+  color: var(--suave);
+  font-size: 13px;
+}
+
+.about-footer a {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .about-header nav {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .about-nav-button {
+    min-height: 38px;
+    padding: 0 12px;
+  }
+
+  .about-main {
+    width: min(100% - 40px, 540px);
+    padding-inline: 18px;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 68px 0 56px;
+  }
+
+  .about-hero-logo {
+    --logo-medida: min(300px, 78vw);
+    grid-row: 1;
+  }
+
+  .about-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .about-hero > p:not(.about-kicker) {
+    font-size: 16px;
+  }
+
+  .about-story {
+    margin-bottom: 48px;
+    padding: 24px 20px;
+  }
+
+  .about-story > p:last-child {
+    font-size: 16px;
+  }
+
+  .about-sections {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 56px;
+  }
+
+  .about-sections article {
+    min-height: 0;
+  }
+}

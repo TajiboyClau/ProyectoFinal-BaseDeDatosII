@@ -1,0 +1,14 @@
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+**/dist/
+**/.test-dist/
+*.tsbuildinfo
+.DS_Store
+
+# datos de informes fuera del repositorio público
+Reportes/
+Fase1/Scripts/Inserts.sql
+
